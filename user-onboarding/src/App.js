@@ -96,7 +96,7 @@ function App() {
   }
 
   useEffect(() => {
-    axios.get('https://reqres.in/api/users')
+    axios.get('https://reqres.in/api/users?page=2')
       .then(res =>{
         debugger
         setUsers(res.data.data)
