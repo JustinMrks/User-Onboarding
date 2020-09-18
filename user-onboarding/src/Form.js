@@ -17,9 +17,9 @@ const Form = ( props ) => {
     }
 
     return (
-        <form className='formContainer'>
+        <form className='formContainer' data-cy='form'>
             <h2>Add a New User</h2>
-            <button disabled={disabled} onSubmit={onSubmit}> submit </button>
+            <button disabled={disabled} onSubmit={onSubmit} data-cy='submit'> submit </button>
             <br />
             <div id='errors'>
                 <div>{errors.first_name}</div>
@@ -34,6 +34,7 @@ const Form = ( props ) => {
                     type='text'
                     value={values.first_name}
                     onChange={onChange}
+                    data-cy='fName'
                 />
             </label>
             <br />
@@ -43,6 +44,7 @@ const Form = ( props ) => {
                     type='text'
                     value={values.last_name}
                     onChange={onChange}
+                    data-cy='lName'
                 />
             </label>
             <br />
@@ -52,6 +54,7 @@ const Form = ( props ) => {
                     type='email'
                     value={values.email}
                     onChange={onChange}
+                    data-cy='email'
                 />
             </label>
             <br />
@@ -61,6 +64,7 @@ const Form = ( props ) => {
                     type='password'
                     value={values.pass}
                     onChange={onChange}
+                    data-cy='pass'
                 />
             </label>
             <br />
@@ -71,6 +75,7 @@ const Form = ( props ) => {
                     value= {values.tos}
                     onChange={onChange}
                     checked={values.tos === true}
+                    data-cy='tos'
                 />
             </label>
 
